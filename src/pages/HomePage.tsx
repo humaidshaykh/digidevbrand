@@ -13,7 +13,6 @@ import {
   ChevronLeft,
   ChevronRight,
   Rocket,
-  Gamepad2,
 } from 'lucide-react';
 
 // Swiper imports for Blog section
