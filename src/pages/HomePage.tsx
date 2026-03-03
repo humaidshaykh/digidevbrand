@@ -144,7 +144,7 @@ const HomePage: React.FC = () => {
   {/* Background Video */}
   <video
     className="absolute inset-0 w-full h-full object-cover"
-    src="/public/hero-bg.mp4"
+    src="hero-bg.mp4"
     autoPlay
     muted
     loop
