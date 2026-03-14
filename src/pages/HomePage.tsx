@@ -123,7 +123,7 @@ const HomePage: React.FC = () => {
   return (
     <div className={`overflow-hidden ${isDark ? 'bg-[#110B2E]' : 'bg-white'}`}>
       {/* Hero Section */}
-      <section className={`relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden pt-40 md:pt-48 ${isDark ? 'bg-[#110B2E]' : 'bg-white'}`}>
+      <section className={`relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden ${isDark ? 'bg-[#110B2E]' : 'bg-white'}`}>
         {/* Grid Background */}
         <div className={`absolute inset-0 z-0 opacity-[0.4] pointer-events-none ${isDark ? 'invert grayscale' : ''}`}
           style={{
@@ -140,11 +140,11 @@ const HomePage: React.FC = () => {
 
 
 
-<div className="container mx-auto px-6 py-10 relative text-center overflow-hidden min-h-[520px]">
+<div className="container mx-auto px-6 py-24 mt-24 relative text-center overflow-hidden">
   {/* Background Video */}
   <video
     className="absolute inset-0 w-full h-full object-cover"
-    src="/public/hero-bg.mp4"
+    src="hero-bg.mp4"
     autoPlay
     muted
     loop
@@ -160,7 +160,7 @@ const HomePage: React.FC = () => {
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6 }}
-    className="flex flex-col items-center relative z-10"
+    className="flex flex-col items-center relative py-10 z-10"
   >
     {/* Tagline Badge */}
     <div

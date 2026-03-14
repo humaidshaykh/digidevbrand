@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        className={`h-32 flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? isDark
             ? 'bg-[#110B2E]/95 backdrop-blur-xl border-b border-[#D6B166]/10 py-3 shadow-lg shadow-black/30'
             : 'bg-white border-b border-[#462878]/10 py-3 shadow-lg'
@@ -94,9 +94,9 @@ const Navbar: React.FC = () => {
                 className="flex items-center"
               >
                 <img
-                  src="/logo.png"
+                  src="/LogoMainWhite.png"
                   alt="DigiDevBrand Logo"
-                  className="h-32 md:h-40 w-auto object-contain drop-shadow-[0_0_10px_rgba(70,40,120,0.2)]"
+                  className="h-20 w-auto object-contain drop-shadow-[0_0_10px_rgba(70,40,120,0.2)]"
                 />
               </motion.div>
             </a>
