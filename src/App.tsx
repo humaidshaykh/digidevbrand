@@ -173,8 +173,8 @@ window.addEventListener("resize", () => {
   if (window.innerWidth < 768) {
     // 👇 mobile pe reset kar do
     document.querySelectorAll(".equal-height ul").forEach((ul) => {
-      ul.style.minHeight = "auto";
-    });
+  (ul as HTMLElement).style.minHeight = "auto";
+});
   } else {
     equalHeightUL();
   }
