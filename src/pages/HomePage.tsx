@@ -153,7 +153,7 @@ const HomePage: React.FC = () => {
   />
 
   {/* Dark overlay for readability */}
-  <div className="absolute inset-0 bg-black/50" />
+  {/* <div className="absolute inset-0 bg-black/50" /> */}
 
   {/* Content */}
   <motion.div
