@@ -140,7 +140,7 @@ const HomePage: React.FC = () => {
 
 
 
-<div className="container mx-auto px-6 py-24 mt-24 relative text-center overflow-hidden">
+<div className="container mx-auto px-6 py-24 mt-24 text-center overflow-hidden video-container">
   {/* Background Video */}
   <video
     className="absolute inset-0 w-full h-full object-cover"
@@ -153,7 +153,7 @@ const HomePage: React.FC = () => {
   />
 
   {/* Dark overlay for readability */}
-  {/* <div className="absolute inset-0 bg-black/50" /> */}
+  <div className="absolute inset-0 bg-black/50" />
 
   {/* Content */}
   <motion.div
