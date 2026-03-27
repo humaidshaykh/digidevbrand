@@ -125,4 +125,70 @@ const App: React.FC = () => {
   );
 };
 
+
+
+
+// Humaids Code
+
+
+function equalHeightUL() {
+  // ❌ mobile pe run nahi hoga
+  if (window.innerWidth < 768) return;
+
+  const containers = document.querySelectorAll(".equal-height");
+
+  containers.forEach((container) => {
+    const uls = container.querySelectorAll("ul");
+
+    let maxHeight = 0;
+
+    uls.forEach((ul) => {
+      ul.style.minHeight = "auto";
+    });
+
+    uls.forEach((ul) => {
+      const height = ul.getBoundingClientRect().height;
+      if (height > maxHeight) {
+        maxHeight = height;
+      }
+    });
+
+    uls.forEach((ul) => {
+      ul.style.minHeight = maxHeight + "px";
+    });
+  });
+}
+
+// 🔥 run multiple times (animation ke baad bhi)
+window.addEventListener("load", () => {
+  equalHeightUL();
+
+  setTimeout(equalHeightUL, 300);
+  setTimeout(equalHeightUL, 800);
+  setTimeout(equalHeightUL, 1500);
+});
+
+// resize pe
+window.addEventListener("resize", () => {
+  if (window.innerWidth < 768) {
+    // 👇 mobile pe reset kar do
+    document.querySelectorAll(".equal-height ul").forEach((ul) => {
+      ul.style.minHeight = "auto";
+    });
+  } else {
+    equalHeightUL();
+  }
+});
+
+// 🔥 observe DOM changes (React + motion fix)
+const observer = new MutationObserver(() => {
+  equalHeightUL();
+});
+
+observer.observe(document.body, {
+  childList: true,
+  subtree: true,
+});
+
+
 export default App;

@@ -396,7 +396,7 @@ const ServicesPage: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 pt-10">
+          <div className="equal-height grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 pt-10">
             {logoPackages.map((pkg, index) => (
               <motion.div
                 key={pkg.name}
@@ -491,7 +491,7 @@ const ServicesPage: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pt-10">
+          <div className="equal-height grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pt-10">
             {webPackages.map((pkg, index) => (
               <motion.div
                 key={pkg.name}
@@ -588,7 +588,7 @@ const ServicesPage: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pt-10">
+          <div className="equal-height grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pt-10">
             {graphicPackages.map((pkg, index) => (
               <motion.div
                 key={pkg.name}
@@ -684,7 +684,7 @@ const ServicesPage: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pt-10">
+          <div className="equal-height grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pt-10">
             {businessCardPackages.map((pkg, index) => (
               <motion.div
                 key={pkg.name}
@@ -781,7 +781,7 @@ const ServicesPage: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pt-10">
+          <div className="equal-height grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pt-10">
             {letterheadPackages.map((pkg, index) => (
               <motion.div
                 key={pkg.name}

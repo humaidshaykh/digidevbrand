@@ -240,7 +240,7 @@ const HomePage: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4"
+              className="flex flex-wrap justify-center gap-3 md:gap-4"
             >
               {[
                 { title: "Graphic Designing", subtitle: "Creative Visuals" },
@@ -252,7 +252,7 @@ const HomePage: React.FC = () => {
               ].map((item, index) => (
                 <motion.div
                   key={index}
-                  className="relative group rounded-3xl h-48 overflow-hidden transition-all duration-500 hover:-translate-y-3"
+                  className="relative group rounded-3xl h-48 overflow-hidden transition-all duration-500 hover:-translate-y-3 w-full sm:w-[48%] lg:w-[23%]"
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: [0.8, 1.07, 0.97, 1.03, 1] }}
                   animate={{

@@ -307,7 +307,7 @@ const ServiceDetailPage: React.FC = () => {
                 <section className={`py-32 ${isDark ? 'bg-white/[0.02]' : 'bg-gray-50'}`}>
                     <div className="container mx-auto px-6 text-center">
                         <h2 className="text-5xl font-black mb-16">Select Your <span className="text-fuchsia-500">Package</span></h2>
-                        <div className={`grid grid-cols-1 ${service.packages.length === 4 ? 'md:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-3'} gap-8`}>
+                        <div className={`equal-height grid grid-cols-1 ${service.packages.length === 4 ? 'md:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-3'} gap-8`}>
                             {service.packages.map((pkg, idx) => (
                                 <motion.div
                                     key={pkg.name}
