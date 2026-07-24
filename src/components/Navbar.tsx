@@ -88,18 +88,7 @@ const Navbar: React.FC = () => {
       >
         <nav className="container mx-auto px-6 py-0">
           <div className="flex items-center justify-between">
-            <a href="/#logo-portfolio" className="flex items-center ml-4">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="flex items-center"
-              >
-                <img
-                  src="/LogoMainWhite.png"
-                  alt="DigiDevBrand Logo"
-                  className="h-20 w-auto object-contain drop-shadow-[0_0_10px_rgba(70,40,120,0.2)]"
-                />
-              </motion.div>
-            </a>
+            <a href="/#logo-portfolio" className="flex items-center ml-4"> <motion.div whileHover={{ scale: 1.05 }} className="flex items-center" > <img src={isDark ? "/LogoMainWhite.png" : "/LogoMainBlack.png"} alt="DigiDevBrand Logo" className="h-20 w-auto object-contain drop-shadow-[0_0_10px_rgba(70,40,120,0.2)]" /> </motion.div> </a>
 
             {/* Center Navigation */}
             <div className="hidden lg:flex items-center">
@@ -308,7 +297,7 @@ const Navbar: React.FC = () => {
 
               {/* CTA Button */}
               <HashLink to="/contact#form-section" smooth className="hidden lg:block"
->
+              >
                 <motion.button
                   whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(70, 40, 120, 0.3)' }}
                   whileTap={{ scale: 0.95 }}

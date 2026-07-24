@@ -136,96 +136,93 @@ const HomePage: React.FC = () => {
         <div className="absolute top-1/4 -left-20 w-80 h-80 bg-purple-500/10 rounded-full blur-[100px] animate-pulse" />
         <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-amber-500/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }} />
 
-        
 
 
 
-<div className="container mx-auto px-6 py-24 mt-24 text-center overflow-hidden video-container">
-  {/* Background Video */}
-  <video
-    className="absolute inset-0 w-full h-full object-cover"
-    src="/hero-video.mp4"
-    autoPlay
-    muted
-    loop
-    playsInline
-    preload="auto"
-  />
 
-  {/* Dark overlay for readability */}
-  <div className="absolute inset-0 bg-black/50" />
+        <div className="container mx-auto px-6 py-24 mt-24 text-center overflow-hidden video-container">
+          {/* Background Video */}
+          <video
+            className="absolute inset-0 w-full h-full object-cover"
+            src="/hero-video.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+          />
 
-  {/* Content */}
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    className="flex flex-col items-center relative py-10 z-10"
-  >
-    {/* Tagline Badge */}
-    <div
-      className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-8 border backdrop-blur-sm ${
-        isDark ? 'bg-white/5 border-white/10 text-white/80' : 'bg-gray-100 border-gray-200 text-gray-600'
-      }`}
-    >
-      <div className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse" />
-      <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">
-        {t('hero.tagline')}
-      </span>
-    </div>
+          {/* Dark overlay for readability */}
+          <div className="absolute inset-0 bg-black/50" />
 
-    {/* Main Heading */}
-    <h1
-      className={`text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-8 leading-[1.1] md:leading-[1.05] tracking-tight max-w-5xl ${
-        isDark ? 'text-white' : 'text-[#1A1A1A]'
-      }`}
-    >
-      {t('hero.title').split('Ecosystems').map((part, i) => (
-        <Fragment key={i}>
-          {i === 1 ? (
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              Ecosystems{part}
-            </span>
-          ) : (
-            part
-          )}
-        </Fragment>
-      ))}
-    </h1>
+          {/* Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col items-center relative py-10 z-10"
+          >
+            {/* Tagline Badge */}
+            <div
+              className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-8 border backdrop-blur-sm ${isDark ? 'bg-white/5 border-white/10 text-white/80' : 'bg-gray-100 border-gray-200 text-gray-600'
+                }`}
+            >
+              <div className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse" />
+              <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">
+                {t('hero.tagline')}
+              </span>
+            </div>
 
-    {/* Subtitle */}
-    <p className={`text-lg md:text-xl lg:text-2xl max-w-3xl mb-12 leading-relaxed ${isDark ? 'text-white/60' : 'text-gray-500'}`}>
-      {t('hero.subtitle')}
-    </p>
+            {/* Main Heading */}
+            <h1
+              className={`text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-8 leading-[1.1] md:leading-[1.05] tracking-tight max-w-5xl ${isDark ? 'text-white' : 'text-white'
+                }`}
+            >
+              {t('hero.title').split('Ecosystems').map((part, i) => (
+                <Fragment key={i}>
+                  {i === 1 ? (
+                    <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                      Ecosystems{part}
+                    </span>
+                  ) : (
+                    part
+                  )}
+                </Fragment>
+              ))}
+            </h1>
 
-    {/* CTA Buttons */}
-    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-      <Link to="/contact">
-        <motion.button
-          whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}
-          whileTap={{ scale: 0.95 }}
-          className="px-8 py-4 bg-black text-white text-lg font-bold rounded-2xl flex items-center gap-2 shadow-2xl transition-all border border-white/10"
-        >
-          {t('hero.cta')}
-          <ArrowRight className="h-5 w-5" />
-        </motion.button>
-      </Link>
+            {/* Subtitle */}
+            <p className={`text-lg md:text-xl lg:text-2xl max-w-3xl mb-12 leading-relaxed ${isDark ? 'text-white/60' : 'text-white'}`}>
+              {t('hero.subtitle')}
+            </p>
 
-      <Link to="/pricing">
-        <motion.button
-          whileHover={{ scale: 1.05, backgroundColor: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)' }}
-          whileTap={{ scale: 0.95 }}
-          className={`px-8 py-4 text-lg font-bold rounded-2xl transition-all border flex items-center gap-2 ${
-            isDark ? 'border-white/20 text-white' : 'border-gray-300 text-gray-900'
-          }`}
-        >
-          <Rocket className="h-5 w-5" />
-          {t('hero.ctaSecondary')}
-        </motion.button>
-      </Link>
-    </div>
-  </motion.div>
-</div>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link to="/contact">
+                <motion.button
+                  whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`px-8 py-4 text-lg font-bold rounded-2xl flex items-center gap-2 shadow-2xl transition-all border border-white/10 ${isDark ? 'bg-black text-white' : 'bg-white/80 text-black'}`}
+                >
+                  {t('hero.cta')}
+                  <ArrowRight className="h-5 w-5" />
+                </motion.button>
+              </Link>
+
+              <Link to="/pricing">
+                <motion.button
+                  whileHover={{ scale: 1.05, backgroundColor: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)' }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`px-8 py-4 text-lg font-bold rounded-2xl transition-all border flex items-center gap-2 ${isDark ? 'border-white/20 text-white' : 'border-gray-300 text-white'
+                    }`}
+                >
+                  <Rocket className="h-5 w-5" />
+                  {t('hero.ctaSecondary')}
+                </motion.button>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
 
 
 

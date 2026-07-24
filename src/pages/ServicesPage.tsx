@@ -319,9 +319,9 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (
-    <div className={`overflow-x-hidden ${isDark ? 'bg-[#0a0a0f]' : 'bg-white'}`}>
+    <div className={`overflow-x-hidden ${isDark ? 'bg-black' : 'bg-white'}`}>
       {/* Hero Section with Full-Width Image Slider */}
-      <section className="relative overflow-hidden pt-[11rem] md:pt-[13rem] bg-black">
+      <section className={`relative overflow-hidden pt-[9rem] md:pt-[9rem] ${isDark ? 'bg-black' : 'bg-white'}`}>
         <div className="md:w-full">
           <div className="container mx-auto px-4 md:px-0 md:max-w-none">
             <div className="relative aspect-[16/9] md:aspect-[21/9] w-full rounded-2xl md:rounded-none overflow-hidden shadow-2xl">
@@ -377,7 +377,7 @@ const ServicesPage: React.FC = () => {
 
 
       {/* Logo Design Packages */}
-      <section className="py-24 relative bg-[#0d0d1a]">
+      <section className={` py-24 relative ${isDark ? 'bg-[#0d0d1a]' : 'bg-white'}`}>
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[linear-gradient(rgba(214,177,102,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(214,177,102,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
         </div>
@@ -390,8 +390,8 @@ const ServicesPage: React.FC = () => {
             className="text-center mb-16"
           >
             <span className="font-medium text-sm uppercase tracking-widest text-[#D6B166]">Creative Solutions</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-4 text-white">Logo Design <span className="text-[#D6B166]">Packages</span></h2>
-            <p className="max-w-2xl mx-auto text-white/50">
+            <h2 className={`text-4xl md:text-5xl font-bold mt-4 mb-4  ${isDark ? 'text-white' : 'text-black'}`}>Logo Design <span className="text-[#D6B166]">Packages</span></h2>
+            <p className={` max-w-2xl mx-auto  ${isDark ? 'text-white/50' : 'text-black'}`}>
               Professional logo designs that represent your brand identity with creativity and precision.
             </p>
           </motion.div>
@@ -404,7 +404,7 @@ const ServicesPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`relative group ${pkg.popular ? 'lg:-mt-6 lg:mb-6' : ''}`}
+                className={`relative group`}
               >
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
@@ -472,7 +472,7 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* Web Development Packages */}
-      <section className="py-24 relative bg-[#0d0d1a]">
+      <section className={`py-24 relative ${isDark ? 'bg-[#0d0d1a]' : 'bg-[#F0F0F5]'}`}>
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[linear-gradient(rgba(214,177,102,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(214,177,102,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
         </div>
@@ -485,8 +485,8 @@ const ServicesPage: React.FC = () => {
             className="text-center mb-16"
           >
             <span className="font-medium text-sm uppercase tracking-widest text-[#D6B166]">Digital Solutions</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-4 text-white">Web Development <span className="text-[#D6B166]">Packages</span></h2>
-            <p className="max-w-2xl mx-auto text-white/50">
+            <h2 className={`text-4xl md:text-5xl font-bold mt-4 mb-4 ${isDark ? 'text-white' : 'text-black'}`}>Web Development <span className="text-[#D6B166]">Packages</span></h2>
+            <p className={`max-w-2xl mx-auto ${isDark ? 'text-white/50' : 'text-black'}`}>
               Complete ecommerce solutions designed to drive sales and enhance your online presence.
             </p>
           </motion.div>
@@ -499,7 +499,7 @@ const ServicesPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`relative group ${pkg.popular ? 'lg:-mt-6 lg:mb-6' : ''}`}
+                className={`relative group`}
               >
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
@@ -569,7 +569,7 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* Graphic Design Packages */}
-      <section className="py-24 relative bg-[#0d0d1a]">
+      <section className={`py-24 relative ${isDark ? 'bg-[#0d0d1a]' : 'bg-[#FFFFFF]'}`}>
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[linear-gradient(rgba(214,177,102,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(214,177,102,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
         </div>
@@ -582,8 +582,8 @@ const ServicesPage: React.FC = () => {
             className="text-center mb-16"
           >
             <span className="font-medium text-sm uppercase tracking-widest text-[#D6B166]">Creative Design</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-4 text-white">Graphic Design <span className="text-[#D6B166]">Packages</span></h2>
-            <p className="max-w-2xl mx-auto text-white/50">
+            <h2 className={`text-4xl md:text-5xl font-bold mt-4 mb-4  ${isDark ? 'text-white' : 'text-black'}`}>Graphic Design <span className="text-[#D6B166]">Packages</span></h2>
+            <p className={`max-w-2xl mx-auto ${isDark ? 'text-white' : 'text-black/50'}`}>
               Professional brochure designs that communicate your message with visual impact and clarity.
             </p>
           </motion.div>
@@ -596,7 +596,7 @@ const ServicesPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`relative group ${pkg.popular ? 'lg:-mt-6 lg:mb-6' : ''}`}
+                className={`relative group`}
               >
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
@@ -665,7 +665,7 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* Business Card Design Packages */}
-      <section className="py-24 relative bg-[#0d0d1a]">
+      <section className={`py-24 relative ${isDark ? 'bg-[#0d0d1a]' : 'bg-[#F0F0F0]'}`}>
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[linear-gradient(rgba(214,177,102,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(214,177,102,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
         </div>
@@ -678,8 +678,8 @@ const ServicesPage: React.FC = () => {
             className="text-center mb-16"
           >
             <span className="font-medium text-sm uppercase tracking-widest text-[#D6B166]">Professional Identity</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-4 text-white">Business Card <span className="text-[#D6B166]">Packages</span></h2>
-            <p className="max-w-2xl mx-auto text-white/50">
+            <h2 className={`text-4xl md:text-5xl font-bold mt-4 mb-4 ${isDark ? 'text-white' : 'text-black'}`}>Business Card <span className="text-[#D6B166]">Packages</span></h2>
+            <p className={`max-w-2xl mx-auto ${isDark ? 'text-white' : 'text-black/50'}`}>
               Make a lasting first impression with professionally designed business cards that reflect your brand.
             </p>
           </motion.div>
@@ -692,7 +692,7 @@ const ServicesPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`relative group ${pkg.popular ? 'lg:-mt-6 lg:mb-6' : ''}`}
+                className={`relative group`}
               >
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
@@ -762,7 +762,7 @@ const ServicesPage: React.FC = () => {
       </section>
 
       {/* Letterhead Design Packages */}
-      <section className="py-24 relative bg-[#0d0d1a]">
+      <section className={`py-24 relative  ${isDark ? 'bg-[#0d0d1a]' : 'bg-[#FFFFFF]'}`}>
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[linear-gradient(rgba(214,177,102,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(214,177,102,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
         </div>
@@ -775,8 +775,8 @@ const ServicesPage: React.FC = () => {
             className="text-center mb-16"
           >
             <span className="font-medium text-sm uppercase tracking-widest text-[#D6B166]">Corporate Stationery</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-4 text-white">Letterhead Design <span className="text-[#D6B166]">Packages</span></h2>
-            <p className="max-w-2xl mx-auto text-white/50">
+            <h2 className={`text-4xl md:text-5xl font-bold mt-4 mb-4 ${isDark ? 'text-white' : 'text-black'}`}>Letterhead Design <span className="text-[#D6B166]">Packages</span></h2>
+            <p className={`max-w-2xl mx-auto ${isDark ? 'text-white' : 'text-black/50'}`}>
               Professional letterhead designs that enhance your corporate communications and brand consistency.
             </p>
           </motion.div>
@@ -789,7 +789,7 @@ const ServicesPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`relative group ${pkg.popular ? 'lg:-mt-6 lg:mb-6' : ''}`}
+                className={`relative group`}
               >
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">

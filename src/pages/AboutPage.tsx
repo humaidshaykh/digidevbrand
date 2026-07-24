@@ -44,7 +44,7 @@ const AboutPage: React.FC = () => {
   return (
     <div className={`overflow-hidden ${isDark ? 'bg-[#1a1235]' : 'bg-white'}`}>
       {/* Hero Section */}
-      <section className="relative w-full max-w-[1920px] mx-auto aspect-video overflow-hidden bg-gray-100 mt-[9rem] md:mt-[11rem]">
+      <section className="relative w-full max-w-[1920px] mx-auto aspect-video overflow-hidden bg-gray-100 mt-[9rem] md:mt-[9rem]">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -93,12 +93,12 @@ const AboutPage: React.FC = () => {
 
 
       {/* CTA Section */}
-      <section className="py-28 relative overflow-hidden">
+      <section className= {`py-28 relative overflow-hidden ${isDark ? 'bg-[#1A1235]' : 'bg-[#F0F0F5]'}`}>
         <div className="absolute">
-          <div className="absolute bg-[#4B2F7D]" />
+          <div className={`absolute bg-[#4B2F7D] ${isDark ? 'bg-[#4B2F7D]' : 'bg-black/70'}`} />
         </div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
-        <div className={`absolute bottom-0 right-1/4 w-96 h-96 ${isDark ? 'bg-[#4B2F7D]' : 'bg-white/10'} rounded-full blur-3xl`} />
+        <div className={`absolute top-0 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl ${isDark ? 'bg-[#4B2F7D]' : 'bg-[#341B4E60]'}`} />
+        <div className={`absolute bottom-0 right-1/4 w-96 h-96 ${isDark ? 'bg-[#4B2F7D]' : 'bg-[#401B4960]'} rounded-full blur-3xl`} />
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -107,9 +107,9 @@ const AboutPage: React.FC = () => {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
-            <Rocket className="h-16 w-16 mx-auto mb-6 text-white/80" />
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white">Ready to Start Your Project?</h2>
-            <p className="text-xl text-white/70 mb-10">
+            <Rocket className={`h-16 w-16 mx-auto mb-6 ${isDark ? 'text-white/80' : 'text-black'}`} />
+            <h2 className={`text-4xl md:text-6xl font-bold mb-6 text-white" ${isDark ? 'text-white' : 'text-black'}`}>Ready to Start Your Project?</h2>
+            <p className={`text-xl mb-10 ${isDark ? 'text-white/70' : 'text-black'}`}>
               Let's collaborate to bring your vision to life. Our team is ready to help you achieve digital excellence.
             </p>
             <Link to="/contact">
